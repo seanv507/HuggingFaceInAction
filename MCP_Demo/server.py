@@ -63,7 +63,7 @@ def get_pdf_data(file_path: str) -> str:
 @mcp.tool()
 async def fetch_weather(city: str, units: str = "metric") -> dict:
     async with httpx.AsyncClient() as client:
-        # API_KEY = "xxxxxxxxxxxxxxxxxxxxxx"
+        # API_KEY = "xxxxxxxxxxxxxxxxxxxxxx"  # pragma: allowlist secret
         # Using OpenWeatherMap API
         response = await client.get(
             "https://api.openweathermap.org/data/2.5/weather",
