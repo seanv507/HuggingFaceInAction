@@ -32,7 +32,7 @@ def get_file(file_path: str) -> str:
     if not os.path.exists(actual_path):
         raise FileNotFoundError(f"Error: File '{actual_path}' not found!")
 
-    with open(actual_path, "r", encoding="utf-8") as file:
+    with open(actual_path, encoding="utf-8") as file:
         return file.read()
 
 
@@ -66,7 +66,7 @@ async def fetch_weather(city: str, units: str = "metric") -> dict:
         # API_KEY = "xxxxxxxxxxxxxxxxxxxxxx"
         # Using OpenWeatherMap API
         response = await client.get(
-            f"https://api.openweathermap.org/data/2.5/weather",
+            "https://api.openweathermap.org/data/2.5/weather",
             params={"q": city, "units": units, "appid": API_KEY},
         )
         if response.status_code == 200:
