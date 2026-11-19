@@ -2,5 +2,6 @@ repos:
   - repo: https://github.com/astral-sh/ruff-pre-commit
     rev: v0.17.5
     hooks:
-      # ruff-check is disabled until the existing lint backlog is cleared
+      - id: ruff-check
+        args: [--fix]
       - id: ruff-format
