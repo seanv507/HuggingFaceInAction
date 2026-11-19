@@ -1,11 +1,12 @@
 # server.py
-from mcp.server.fastmcp import FastMCP
-import httpx
-import fitz  # for PyMuPDF
 import os
 
 # =======================================================================================
 import sys
+
+import fitz  # for PyMuPDF
+import httpx
+from mcp.server.fastmcp import FastMCP
 
 # Get API key from environment variable
 API_KEY = os.getenv("OPENWEATHER_API_KEY")
