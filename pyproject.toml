@@ -27,6 +27,7 @@ dependencies = [
     "pandas>=2.3.3",
     "pillow>=13.0.0",
     "protobuf>=7.36.2",
+    "python-dotenv>=1.2.4",
     "scikit-image>=0.26.0",
     "sentence-transformers>=6.3.0",
     "sentencepiece>=0.2.3",
