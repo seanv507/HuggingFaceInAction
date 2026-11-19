@@ -1,0 +1,48 @@
+# ---- Python / uv ----
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+# Keep .python-version, pyproject.toml and uv.lock committed
+
+# ---- Jupyter ----
+.ipynb_checkpoints/
+
+# ---- Hugging Face caches and model downloads ----
+.cache/
+huggingface/
+*.safetensors
+*.bin
+*.gguf
+*.pt
+*.pth
+*.ckpt
+models/
+checkpoints/
+wandb/
+mlruns/
+lightning_logs/
+
+# ---- Secrets and local config ----
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+secrets.json
+
+# ---- OS / editor ----
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
