@@ -1,7 +1,7 @@
 # server.py
 import os
 
-# =======================================================================================
+# ======================================================================================
 import sys
 
 import fitz  # for PyMuPDF
@@ -15,7 +15,7 @@ if not API_KEY:
         "Error: OPENWEATHER_API_KEY environment variable must be set", file=sys.stderr
     )
     sys.exit(1)
-# =======================================================================================
+# ======================================================================================
 
 # Create an MCP server
 mcp = FastMCP("MCP Demo")
@@ -102,7 +102,8 @@ async def fetch_weather(city: str, units: str = "metric") -> dict:
             return weather_data
         else:
             return {
-                "error": f"Weather data not available. Status code: {response.status_code}",
+                "error": f"Weather data not available. "
+                f"Status code: {response.status_code}",
                 "message": response.text,
             }
 
